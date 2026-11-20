@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="pD2YMMY27Wya1kWpnjT3PC0WkndvJdQ8dwxoATudit8" />" content="width=device-width, initial-scale=1.0">
+<title>Josefina - Tortas y Croquetas | Raúl Oviedo</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#fff5f7;color:#4a2c2c}
+header{background:linear-gradient(135deg,#ff5e8a,#ffb3c6,#ffd700);padding:25px 15px;text-align:center;color:white;position:relative;overflow:hidden}
+header h1{font-size:38px;letter-spacing:1px;text-shadow:0 2px 10px rgba(0,0,0,.2)}
+header h1 span{color:#fff8d6}
+header p{margin-top:5px;font-size:16px}
+.badge{display:inline-block;background:white;color:#ff5e8a;padding:6px 14px;border-radius:20px;font-weight:bold;font-size:13px;margin-top:10px}
+.topbar{background:#4a2c2c;color:#ffd700;text-align:center;padding:8px;font-size:13px;font-weight:bold}
+.hero{padding:20px 15px;text-align:center}
+.hero h2{font-size:26px;color:#d6336c}
+.hero p{margin:10px 0;color:#777}
+.btn-wsp{display:inline-block;background:#25D366;color:white;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:bold;font-size:16px;margin-top:10px;box-shadow:0 5px 15px rgba(0,0,0,.2)}
+.btn-wsp:hover{transform:scale(1.03)}
+.filtros{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 15px;margin:15px 0}
+.filtros button{border:2px solid #ff5e8a;background:white;color:#ff5e8a;padding:8px 16px;border-radius:20px;font-weight:bold;cursor:pointer}
+.filtros button.active,.filtros button:hover{background:#ff5e8a;color:white}
+.catalogo{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 15px 20px}
+.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.08);border:1px solid #ffe0e8}
+.card img{width:100%;height:150px;object-fit:cover}
+.card-body{padding:12px}
+.card-body h3{font-size:16px;color:#4a2c2c}
+.card-body p{font-size:13px;color:#888;margin:5px 0}
+.precio{font-size:18px;font-weight:900;color:#d6336c}
+.precio small{font-size:11px;color:#999;font-weight:normal}
+.btn-pedir{display:block;text-align:center;background:#ff5e8a;color:white;padding:10px;border-radius:12px;text-decoration:none;font-weight:bold;margin-top:8px;font-size:14px}
+.btn-pedir.gold{background:linear-gradient(90deg,#d4af37,#ffd700);color:#4a2c2c}
+.seccion{padding:20px 15px;background:white;margin:15px;border-radius:20px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+.seccion h2{color:#d6336c;margin-bottom:10px;font-size:21px}
+.tabla{width:100%;border-collapse:collapse;font-size:14px}
+.tabla td{padding:10px 5px;border-bottom:1px solid #ffe0e8}
+.tabla td:last-child{text-align:right;font-weight:bold;color:#d6336c}
+.lista{list-style:none}
+.lista li{padding:8px 0;border-bottom:1px dashed #ffd1dc}
+.lista li b{color:#d6336c}
+.opiniones{background:#fff0f3;padding:15px;border-radius:15px;margin-top:10px}
+.opiniones p{font-size:14px;font-style:italic}
+footer{background:#4a2c2c;color:white;text-align:center;padding:25px 15px}
+footer a{color:#ffd700;text-decoration:none;font-weight:bold}
+.agregar{border:2px dashed #ffb3c6;background:#fff5f7;display:flex;align-items:center;justify-content:center;min-height:220px;text-align:center;color:#ff8fab;padding:15px;border-radius:18px}
+@media(min-width:700px){.catalogo{grid-template-columns:1fr 1fr 1fr 1fr}.card img{height:180px}header h1{font-size:52px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">✨ TORTAS ARTESANALES • HECHAS CON AMOR EN RAÚL OVIEDO - CAAGUAZÚ ✨</div>
+
+<header>
+<h1>JOSEFINA <span>💖</span></h1>
+<p>Tortas & Croquetas Caseras</p>
+<div class="badge">⭐ 4.9 - Más de 200 clientes felices ⭐</div>
+</header>
+
+<div class="hero">
+<h2>¿Antojo de algo rico hoy? 😍</h2>
+<p>Tortas esponjosas por kilo y croquetas doraditas. Pedí por WhatsApp y te lo preparamos fresquito.</p>
+<a class="btn-wsp" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20pedir%20una%20torta">📱 PEDIR POR WHATSAPP - 0973 789 686</a>
+<p style="font-size:12px;margin-top:8px">⏰ Pedidos con 1 día de anticipación • Entregas en Raúl Oviedo</p>
+</div>
+
+<div class="filtros">
+<button class="active" onclick="filtrar('todo',this)">Todo ✨</button>
+<button onclick="filtrar('chocolate',this)">🍫 Chocolate</button>
+<button onclick="filtrar('cumple',this)">🎂 Cumpleaños</button>
+<button onclick="filtrar('croqueta',this)">🥟 Croquetas</button>
+</div>
+
+<div class="catalogo" id="catalogo">
+
+<!-- TORTA CHOCOLATE 1 -->
+<div class="card" data-cat="chocolate">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Torta de chocolate">
+<div class="card-body"><h3>🍫 Torta de Chocolate Clásica</h3><p>Bizcochuelo húmedo, dulce de leche y cobertura de chocolate.</p><div class="precio">60.000 Gs <small>/ por kilo</small></div><a class="btn-pedir" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20la%20Torta%20de%20Chocolate%20Cl%C3%A1sica">Pedir esta torta 💬</a></div>
+</div>
+
+<!-- TORTA CHOCOLATE 2 -->
+<div class="card" data-cat="chocolate">
+<img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=600&q=80" alt="Torta chocolate">
+<div class="card-body"><h3>🍫 Torta Doble Chocolate</h3><p>Extra chocolate, ideal para los amantes del chocolate.</p><div class="precio">60.000 Gs <small>/ por kilo</small></div><a class="btn-pedir" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20la%20Torta%20Doble%20Chocolate">Pedir esta torta 💬</a></div>
+</div>
+
+<!-- CUMPLE 1 -->
+<div class="card" data-cat="cumple">
+<img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Torta cumpleaños">
+<div class="card-body"><h3>🎂 Torta de Cumpleaños Colorida</h3><p>Decoración personalizada con tu nombre y tu color favorito.</p><div class="precio">60.000 Gs <small>/ por kilo</small></div><a class="btn-pedir gold" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20una%20Torta%20de%20Cumplea%C3%B1os">Pedir esta torta 🎉</a></div>
+</div>
+
+<!-- CUMPLE 2 -->
+<div class="card" data-cat="cumple">
+<img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&q=80" alt="Torta cumple">
+<div class="card-body"><h3>🎂 Torta Infantil con Dibujitos</h3><p>Para niños, con temática a elección. ¡Les encanta!</p><div class="precio">60.000 Gs <small>/ por kilo</small></div><a class="btn-pedir gold" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20una%20Torta%20Infantil">Pedir esta torta 🎉</a></div>
+</div>
+
+<!-- CROQUETA 1 -->
+<div class="card" data-cat="croqueta">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Croquetas">
+<div class="card-body"><h3>🥟 Croquetas de Pollo</h3><p>Doraditas, crocantes por fuera, suaves por dentro.</p><div class="precio">10.000 Gs <small>/ bandejita</small></div><a class="btn-pedir" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20Croquetas%20de%20Pollo">Pedir croquetas 💬</a></div>
+</div>
+
+<!-- CROQUETA 2 -->
+<div class="card" data-cat="croqueta">
+<img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=600&q=80" alt="Croquetas">
+<div class="card-body"><h3>🥟 Croquetas Mixtas</h3><p>Pollo y carne, la bandejita perfecta para compartir.</p><div class="precio">10.000 Gs <small>/ bandejita</small></div><a class="btn-pedir" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20Croquetas%20Mixtas">Pedir croquetas 💬</a></div>
+</div>
+
+<!-- ESPACIO PARA AGREGAR MAS FOTOS -->
+<div class="agregar"><div><h3>➕ Acá va tu próxima foto</h3><p>Espacio listo para agregar más tortas cuando Josefina te pase fotos nuevas</p></div></div>
+<div class="agregar"><div><h3>➕ Acá va tu próxima foto</h3><p>Espacio listo para agregar más croquetas o tortas</p></div></div>
+
+</div>
+
+<div class="seccion">
+<h2>💰 Precios Claros - Sin Sorpresas</h2>
+<table class="tabla">
+<tr><td>🎂 Tortas (cualquier sabor)</td><td>60.000 Gs / kilo</td></tr>
+<tr><td>🥟 Croquetas - Bandejita</td><td>10.000 Gs</td></tr>
+<tr><td>🎂 Torta 1 kilo (4-6 personas)</td><td>60.000 Gs</td></tr>
+<tr><td>🎂 Torta 2 kilos (10-12 personas)</td><td>120.000 Gs</td></tr>
+<tr><td>🎂 Torta 3 kilos (Fiesta grande)</td><td>180.000 Gs</td></tr>
+</table>
+<p style="font-size:12px;color:#999;margin-top:8px">* El precio incluye decoración básica. Decoración personalizada se cotiza por WhatsApp.</p>
+</div>
+
+<div class="seccion">
+<h2>✨ ¿Por qué elegir a Josefina?</h2>
+<ul class="lista">
+<li><b>✔ 100% Casero:</b> Sin conservantes, como en casa.</li>
+<li><b>✔ Fresco del día:</b> Se hace el mismo día de tu pedido.</li>
+<li><b>✔ Personalizado:</b> Ponemos tu nombre, tu edad, tu dibujo.</li>
+<li><b>✔ Entrega rápida:</b> En Raúl Oviedo y alrededores.</li>
+</ul>
+<div class="opiniones"><p>"La torta de chocolate de Josefina es la mejor de Oviedo, mis hijos no quieren otra!"</p><b>- Cliente de Raúl Oviedo ⭐⭐⭐⭐⭐</b></div>
+<div class="opiniones"><p>"Pedí croquetas para el cumple y volaron, todos me preguntaron dónde compré."</p><b>- Cliente feliz ⭐⭐⭐⭐⭐</b></div>
+</div>
+
+<div class="seccion" style="text-align:center;background:linear-gradient(135deg,#ff5e8a,#ffd700);color:white">
+<h2 style="color:white">¿Lista para pedir?</h2>
+<p style="color:white">Escribime ahora y te confirmo tu pedido en 5 minutos.</p><br>
+<a class="btn-wsp" href="https://wa.me/595973789686?text=Hola%20Josefina!%20Quiero%20hacer%20un%20pedido">💬 HABLAR CON JOSEFINA AHORA</a>
+</div>
+
+<footer>
+<h3>JOSEFINA - Tortas & Croquetas 💖</h3>
+<p>Raúl Oviedo - Caaguazú - Paraguay</p>
+<p>WhatsApp: <a href="https://wa.me/595973789686">0973 789 686</a></p>
+<p style="font-size:12px;margin-top:10px;opacity:.7">Hecha con amor para mostrar como ejemplo de página web profesional.</p>
+</footer>
+
+<script>
+function filtrar(cat,btn){
+document.querySelectorAll('.filtros button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+document.querySelectorAll('.card').forEach(c=>{
+if(cat==='todo' || c.dataset.cat===cat){c.style.display='block'} else {c.style.display='none'}
+});
+}
+</script>
+</body>
+</html>
